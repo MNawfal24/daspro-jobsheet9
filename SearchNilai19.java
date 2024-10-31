@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class SearchNilai19 {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
          int jmlelemen = 0, key, hasil;
         
          System.out.println(" Masukkan jumlah array = ");
@@ -27,7 +30,7 @@ public class SearchNilai19 {
             System.out.println(" Nilai" + key + " ditemukan di indeks ke-" + hasil);
 
         }else {
-            System.out.println("nilai" + hey + "tidak ditemukan");
+            System.out.println("nilai" + key + "tidak ditemukan");
         }
 
         sc.close();
