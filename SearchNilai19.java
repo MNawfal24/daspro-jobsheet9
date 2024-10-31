@@ -1,18 +1,35 @@
 public class SearchNilai19 {
 
     public static void main(String[] args) {
-        int[] arrNilai = {80, 85, 78, 96, 90, 82, 86};
-        int key = 90;
-        int hasil = 0;
+         int jmlelemen = 0, key, hasil;
+        
+         System.out.println(" Masukkan jumlah array = ");
+         jmlelemen = sc.nextInt();
 
-        for(int i = 0; i< arrNilai.length; i++){
+            int[] arrNilai = new int [jmlelemen];
+
+        for (int i = 0 ; i < jmlelemen; i++) {
+            System.out.print("elemen ke-" + i + " = ");
+            arrNilai[i] = sc.nextInt();
+        }
+        System.out.println(" masukkan nilai yang ingin di cari = " );
+        key = sc.nextInt();
+
+        hasil = -1;
+
+        for (int i = 0; i<arrNilai.length; i++){
             if (key == arrNilai[i]){
                 hasil = i;
                 break;
             }
         }
-        System.out.println();
-        System.out.println("Nilai " +key+" ketemu di indeks ke-" +hasil);
-        System.out.println();
+        if (hasil != -1){
+            System.out.println(" Nilai" + key + " ditemukan di indeks ke-" + hasil);
+
+        }else {
+            System.out.println("nilai" + hey + "tidak ditemukan");
+        }
+
+        sc.close();
     }
 }
